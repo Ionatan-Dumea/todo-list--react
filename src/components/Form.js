@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { nanoid } from "nanoid";
-
-import { IoAddCircleOutline, IoAddCircleSharp } from "react-icons/io5";
+import { IoAddCircleOutline } from "react-icons/io5";
 
 export default function Form({ input, setInput, setTodos }) {
   const handleChange = (e) => {
     setInput(e.target.value);
   };
+
   const handleAddBtn = (e) => {
     e.preventDefault();
     inputRef.current.focus();
@@ -21,6 +21,7 @@ export default function Form({ input, setInput, setTodos }) {
       isDone: false,
     };
   };
+
   const handleKeypress = (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
