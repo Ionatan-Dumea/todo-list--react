@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Form from "./components/Form";
+import Todo from "./components/Todo";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 function App() {
+  const [input, setInput] = useState("");
+  const [todos, setTodos] = useLocalStorage("todos", []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <Form input={input} setInput={setInput} setTodos={setTodos} />
+      <Todo todos={todos} setTodos={setTodos} />
+    </main>
   );
 }
 
