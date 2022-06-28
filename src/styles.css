@@ -31,7 +31,7 @@ input {
 }
 
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - (0.25 + 1rem));
 }
 
 .created-by {
@@ -39,6 +39,8 @@ main {
   bottom: 0.25rem;
   font-size: 0.75rem;
   font-family: "Trispace", sans-serif;
+  left: 0;
+  right: 0;
 }
 
 .title {
