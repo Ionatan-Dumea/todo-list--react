@@ -39,7 +39,10 @@ export default function Todo({
         onClick={() => handleMarkBtn(todo.id)}
         style={
           todo.isDone
-            ? { textDecoration: "line-through" }
+            ? {
+                textDecorationLine: "line-through",
+                textDecorationThickness: ".15rem",
+              }
             : { textDecoration: "none" }
         }
       >
