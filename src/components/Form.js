@@ -45,6 +45,7 @@ export default function Form({ input, setInput, setTodos }) {
         value={input}
         onKeyDown={handleKeypress}
         ref={inputRef}
+        spellcheck="false"
       />
       <div className="form__add center" onClick={(e) => handleAddBtn(e)}>
         <IoAddCircleOutline />
