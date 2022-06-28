@@ -13,6 +13,7 @@ function App() {
 
   return (
     <main>
+      <h1 className="title">To-do list</h1>
       {isEditing ? (
         <EditForm
           currentTodo={currentTodo}
@@ -29,6 +30,7 @@ function App() {
         setIsEditing={setIsEditing}
         setCurrentTodo={setCurrentTodo}
       />
+      <p className="created-by">&copy; Created by Ionatan Dumea</p>
     </main>
   );
 }
